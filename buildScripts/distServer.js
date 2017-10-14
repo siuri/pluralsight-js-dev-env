@@ -10,8 +10,8 @@ const app = express();
 
 //Compression
 //Production
-app.use(express.static('dist'));
 app.use(compression());
+app.use(express.static('dist'));
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../src/index.html'));
